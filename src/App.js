@@ -35,18 +35,18 @@ function App() {
 					<Hero />
 
 					{/* Star ratings */}
-					<section className="wrapper">
+					<div className="wrapper">
 						{ratings.map((rate, index) => {
 							return <Ratings key={index} {...rate} />;
 						})}
-					</section>
+					</div>
 				</div>
 
-				<section className="card-holder">
+				<div className="card-holder">
 					{buyersData.map((info) => {
 						return <Reviews key={info.id} {...info} />;
 					})}
-				</section>
+				</div>
 			</article>
 		</main>
 	);
