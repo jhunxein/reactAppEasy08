@@ -1,0 +1,63 @@
+.card-holder {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 99px;
+
+	@media only screen and (min-width: $desktop-lg) {
+		margin-bottom: 0;
+	}
+
+	blockquote {
+		margin: 0 auto;
+		background-color: $clr-primary-1;
+		border-radius: 5px;
+		color: $clr-neutral-3;
+		padding-left: 32px;
+		padding-right: 32px;
+		padding-top: 42px;
+		padding-bottom: 34px;
+
+		margin-bottom: 16px;
+
+		width: 100%;
+		max-width: $max-width;
+
+		@media only screen and (min-width: $desktop-lg) {
+			margin-left: 30px;
+			max-width: $max-width-qt;
+			margin-bottom: 0;
+
+			&:nth-child(1) {
+				margin-left: 0;
+			}
+			&:nth-child(2) {
+				margin-top: 16px;
+			}
+			&:nth-child(3) {
+				margin-top: 32px;
+			}
+		}
+
+		.buyer-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: left;
+			margin-bottom: 15px;
+		}
+
+		.lead {
+			position: relative;
+			margin: 0;
+			font-size: 12px;
+
+			&::after {
+				content: '"';
+				margin-left: 2 px;
+			}
+			&::before {
+				content: '"';
+				margin-right: 2 px;
+			}
+		}
+	}
+}

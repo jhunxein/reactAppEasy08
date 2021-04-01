@@ -1,0 +1,30 @@
+.lead {
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: 400;
+}
+
+.title {
+	font-size: 28px;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+.avatar-info {
+	font-size: 12px;
+	font-style: normal;
+	margin-left: 12px;
+	font-weight: 700;
+
+	span {
+		display: block;
+		color: $clr-primary-2;
+		text-transform: capitalize;
+		margin-top: 0.5em;
+		font-weight: 400;
+	}
+}

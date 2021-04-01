@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+
+import Hero from './components/Hero';
+import Ratings from './components/Ratings';
+import Reviews from './components/Reviews';
+
+import { buyer } from './data/buyers';
+
+const ratings = [
+	{
+		name: 'Reviews',
+		rate: 5,
+	},
+	{
+		name: 'Report Guru',
+		rate: 5,
+	},
+	{
+		name: 'BestTech',
+		rate: 5,
+	},
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [buyersData, setBuyers] = useState(buyer);
+
+	useEffect(() => {
+		setBuyers(buyer);
+	}, []);
+
+	return (
+		<main className="container">
+			<article>
+				<div className="container-wrapper">
+					<Hero />
+
+					{/* Star ratings */}
+					<section className="wrapper">
+						{ratings.map((rate, index) => {
+							return <Ratings key={index} {...rate} />;
+						})}
+					</section>
+				</div>
+
+				<section className="card-holder">
+					{buyersData.map((info) => {
+						return <Reviews key={info.id} {...info} />;
+					})}
+				</section>
+			</article>
+		</main>
+	);
 }
 
 export default App;

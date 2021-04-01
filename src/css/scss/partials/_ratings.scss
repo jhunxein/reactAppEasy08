@@ -1,0 +1,52 @@
+.wrapper {
+	margin-bottom: 49px;
+	width: 100%;
+	max-width: $max-width;
+
+	@media only screen and (min-width: $desktop-lg) {
+		margin-right: 94px;
+	}
+
+	figure {
+		margin: 0 auto;
+		background-color: rgba($clr-primary-1, 0.1);
+
+		color: $clr-primary-1;
+		border-radius: 5px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		margin-bottom: 16px;
+
+		font-weight: 700;
+		font-size: 12px;
+
+		width: 100%;
+
+		@media only screen and (min-width: $desktop-lg) {
+			flex-direction: row;
+			padding-top: 12px;
+			padding-bottom: 12px;
+
+			&:nth-child(2) {
+				margin-left: 48px;
+			}
+			&:nth-child(3) {
+				margin-left: 94px;
+				margin-bottom: 0;
+			}
+		}
+
+		figcaption {
+			@media only screen and (min-width: $desktop-lg) {
+				margin-left: 23px;
+				font-size: 14px;
+			}
+		}
+	}
+}
